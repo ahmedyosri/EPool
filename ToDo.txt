@@ -1,0 +1,13 @@
+- Fire Cue Ball
+- Fire cue on mouse input
+- Modify firing angle
+- angle and power based on mouse
+- add stick
+- set 8 ball world
+- physics of balls normal shooting
+- ball falls into holes
+- make table
+- add textures
+- add ui for stick
+- add predictors
+- 
