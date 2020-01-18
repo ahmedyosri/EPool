@@ -15,6 +15,7 @@ public class ShootBallExecuteSystem : JobComponentSystem
                 {
                     sbc.Shoot = false;
                     pv.Linear = sbc.direction * sbc.power;
+                    pv.Angular = sbc.angular;
                 }
             }).Run();
 

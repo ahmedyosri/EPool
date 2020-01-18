@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Restitution:
       m_Override: 1
       m_Value:
-        Value: 0.9
+        Value: 1
         CombineMode: 2
     m_BelongsTo:
       m_Override: 1

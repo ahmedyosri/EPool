@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 941384507509928726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99, y: 0.99, z: 0.99}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MotionType: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0.3
   m_AngularDamping: 0
   m_InitialLinearVelocity:
@@ -231,10 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d30974bf68d61043b1572197db94cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SimulationType: 1
+  SimulationType: 2
   Gravity:
     x: -0
-    y: -9.81
+    y: 0
     z: -0
-  SolverIterationCount: 4
+  SolverIterationCount: 512
   ThreadCountHint: 8

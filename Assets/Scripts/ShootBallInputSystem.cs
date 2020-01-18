@@ -10,7 +10,7 @@ public class ShootBallInputSystem : JobComponentSystem
     Vector3 MousePosition()
     {
         Vector3 v = Input.mousePosition;
-        v.y = 2;
+        v.z = 1;
         return Camera.main.ScreenToWorldPoint(v);
     }
 
@@ -18,6 +18,8 @@ public class ShootBallInputSystem : JobComponentSystem
     {
         bool mouseReleased = Input.GetMouseButtonUp(0);
         float3 pos = MousePosition();
+        pos = new float3(0, 4, -8);
+        float3 angularPower = new float3(20, 0, 0);
         float2 mousePos = new float2(pos.x, pos.z);
         EntityCommandBuffer ecb = new EntityCommandBuffer(Unity.Collections.Allocator.TempJob);
 
@@ -32,6 +34,14 @@ public class ShootBallInputSystem : JobComponentSystem
                 sbc.Shoot = true;
                 sbc.direction = normalize(dir);
                 sbc.power = length(dir) * 5;
+                sbc.angular = angularPower;
+
+                if(sbc.overrideSettings)
+                {
+                    sbc.power = length(sbc.direction) * sbc.overridePower;
+                    sbc.direction = normalize(sbc.overrideDir);
+                    sbc.angular = sbc.overrideAngular;
+                }
             }
         }).Run();
 
