@@ -1,5 +1,5 @@
 ﻿using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public struct BallCue : IComponentData
+public struct BallCueTag : IComponentData
 { }

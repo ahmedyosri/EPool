@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 9199651921383557487}
   - component: {fileID: 4814516096167028523}
   - component: {fileID: -4194207638652549626}
-  - component: {fileID: 2335939838003087314}
   - component: {fileID: 1921176825082409988}
+  - component: {fileID: -5070960782414176583}
+  - component: {fileID: -5041901263131562705}
   m_Layer: 0
   m_Name: Ball_Cue
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_ForceUnique: 0
   m_Material:
     m_SupportsTemplate: 1
-    m_Template: {fileID: 0}
+    m_Template: {fileID: 11400000, guid: 6ffc2c65f9ba76a46b56be30dd93ec19, type: 2}
     m_IsTrigger:
       m_Override: 0
       m_Value: 0
@@ -172,17 +173,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MotionType: 0
   m_Mass: 1
-  m_LinearDamping: 0.01
-  m_AngularDamping: 1
+  m_LinearDamping: 0.3
+  m_AngularDamping: 0
   m_InitialLinearVelocity:
     x: 0
     y: 0
-    z: 0
+    z: 15
   m_InitialAngularVelocity:
     x: 0
     y: 0
     z: 0
-  m_GravityFactor: 0
+  m_GravityFactor: 1
   m_OverrideDefaultMassDistribution: 0
   m_CenterOfMass:
     x: 0
@@ -220,18 +221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 0
---- !u!114 &2335939838003087314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941384507509928726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1921176825082409988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,3 +233,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa906d32901218048b2e353fa4cb0346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5070960782414176583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941384507509928726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d30974bf68d61043b1572197db94cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SimulationType: 1
+  Gravity:
+    x: -0
+    y: -9.81
+    z: -0
+  SolverIterationCount: 512
+  ThreadCountHint: 8
+--- !u!114 &-5041901263131562705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941384507509928726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec8db2f691704649a94ca9b23cff21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: 0
+  direction:
+    x: 0
+    y: 0
+    z: 0
+  power: 0

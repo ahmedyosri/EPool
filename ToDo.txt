@@ -10,4 +10,3 @@
 - add textures
 - add ui for stick
 - add predictors
-- 
