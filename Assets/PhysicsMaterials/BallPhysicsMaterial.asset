@@ -21,13 +21,13 @@ MonoBehaviour:
     m_Friction:
       m_Override: 1
       m_Value:
-        Value: 0.3
-        CombineMode: 3
+        Value: 1
+        CombineMode: 2
     m_Restitution:
       m_Override: 1
       m_Value:
-        Value: 1
-        CombineMode: 3
+        Value: 0.9
+        CombineMode: 0
     m_BelongsTo:
       m_Override: 1
       m_Value: 0101010101010101010101010101010101010101010101010101010101010101
